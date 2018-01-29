@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-
+// This class is necessary to read all the inputs that the users write
 public class LT {
 
     private char[] llegirln() {
