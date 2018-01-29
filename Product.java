@@ -1,3 +1,4 @@
+// This class define the object "Producto"
 public class Producto {
     String nombre;
     int cantidad;
