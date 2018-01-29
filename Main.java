@@ -76,7 +76,7 @@ public class Gestion {
         productos.add(p);
 
         try {
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestor_productos", "root", "portopetro98");
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestor_productos", "root", "contraseña");
             Statement s = c.createStatement();
 
             String cadena = "INSERT INTO Productos (Nombre, Cantidad, Precio, ID, Categoria) VALUES "
@@ -97,7 +97,7 @@ public class Gestion {
         if (getObject(ID) != null) {
             productos.remove(getObject(ID));
             try {
-                Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestor_productos", "root", "portopetro98");
+                Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestor_productos", "root", "contraseña");
                 Statement s = c.createStatement();
                 s.executeUpdate("DELETE FROM Productos WHERE ID=" + ID);
                 System.out.println("Producto eliminado correctamente\n");
@@ -130,7 +130,7 @@ public class Gestion {
 
     private void inventario() {
         try {
-            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestor_productos", "root", "portopetro98");
+            Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestor_productos", "root", "contraseña");
             Statement s = c.createStatement();
             ResultSet rs = s.executeQuery("SELECT * FROM Productos");
             System.out.println("Nombre \t Cantidad \t Precio");
